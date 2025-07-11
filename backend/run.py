@@ -1,5 +1,31 @@
 import argparse
+import sys
+from src.main import MainApplication
+import os
+# Add the src directory to Python path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+from src.utils.logger import Logger
 
+
+def run_scraping():
+    """Run the complete scraping workflow."""
+    print("🚀 Starting El País News Scraper")
+    print("=" * 50)
+    
+    try:
+        app = MainApplication()
+        result = app.run_complete_workflow()
+        
+        if result.success_count > 0:
+            print("\n✅ Scraping completed successfully!")
+            print(f"📊 Results: {result.success_count} articles processed")
+        else:
+            print("\n❌ Scraping completed with errors")
+            
+    except Exception as e:
+        Logger.error(f"Scraping failed: {str(e)}")
+        print(f"\n💥 Error: {str(e)}")
+        sys.exit(1)
 
 def main():
     """Main CLI entry point or Server entry point"""
@@ -32,7 +58,7 @@ def main():
     # Execute command
     if args.command == 'scrape':
         ## create appropriate scaping function
-        pass
+        run_scraping()
     elif args.command == 'browserstack':
         ## create appropriate BrowserStack function
         pass
