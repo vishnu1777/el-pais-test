@@ -350,6 +350,7 @@ class ElPaisScraper:
             List of scraped articles
         """
         articles = []
+        is_browserstack = capabilities is not None
         
         try:
             self._init_driver(capabilities)
@@ -383,7 +384,9 @@ class ElPaisScraper:
         except Exception as e:
             self.logger.error(f"Error during scraping: {str(e)}")
         finally:
-            self.close()
+            # Only close driver if not using BrowserStack (let runner handle BrowserStack closure)
+            if not is_browserstack:
+                self.close()
         
         return articles
     

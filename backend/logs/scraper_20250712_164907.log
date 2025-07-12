@@ -1,0 +1,153 @@
+2025-07-12 16:49:07,419 - elpais_scraper - INFO - Starting parallel tests on 5 configurations with 5 workers
+2025-07-12 16:49:07,435 - elpais_scraper - INFO - Starting test on Chrome latest - Windows 10
+2025-07-12 16:49:07,435 - elpais_scraper - INFO - Starting test on Firefox latest - Windows 10
+2025-07-12 16:49:07,435 - elpais_scraper - INFO - Starting test on Safari latest - OS X Big Sur
+2025-07-12 16:49:07,435 - elpais_scraper - INFO - Starting test on Chrome latest - android 11.0
+2025-07-12 16:49:07,435 - elpais_scraper - INFO - Starting test on Safari latest - ios 15
+2025-07-12 16:49:12,749 - elpais_scraper - INFO - WebDriver initialized successfully for safari
+2025-07-12 16:49:12,749 - elpais_scraper - INFO - Navigating to El País opinion section...
+2025-07-12 16:49:13,692 - elpais_scraper - INFO - WebDriver initialized successfully for chrome
+2025-07-12 16:49:13,692 - elpais_scraper - INFO - Navigating to El País opinion section...
+2025-07-12 16:49:14,816 - elpais_scraper - INFO - Successfully navigated to El País opinion section
+2025-07-12 16:49:14,816 - elpais_scraper - INFO - Extracting article links...
+2025-07-12 16:49:15,393 - elpais_scraper - INFO - Found 5 article links
+2025-07-12 16:49:15,393 - elpais_scraper - INFO - Scraping 5 articles...
+2025-07-12 16:49:15,393 - elpais_scraper - INFO - Processing article 1/5
+2025-07-12 16:49:15,393 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/editoriales/
+2025-07-12 16:49:18,680 - elpais_scraper - INFO - Successfully navigated to El País opinion section
+2025-07-12 16:49:18,680 - elpais_scraper - INFO - Extracting article links...
+2025-07-12 16:49:19,397 - elpais_scraper - INFO - Found 5 article links
+2025-07-12 16:49:19,397 - elpais_scraper - INFO - Scraping 5 articles...
+2025-07-12 16:49:19,397 - elpais_scraper - INFO - Processing article 1/5
+2025-07-12 16:49:19,397 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/editoriales/
+2025-07-12 16:49:26,377 - elpais_scraper - INFO - WebDriver initialized successfully for chrome
+2025-07-12 16:49:26,377 - elpais_scraper - INFO - Navigating to El País opinion section...
+2025-07-12 16:49:26,377 - elpais_scraper - INFO - WebDriver initialized successfully for firefox
+2025-07-12 16:49:26,377 - elpais_scraper - INFO - Navigating to El País opinion section...
+2025-07-12 16:49:28,997 - elpais_scraper - INFO - WebDriver initialized successfully for safari
+2025-07-12 16:49:28,997 - elpais_scraper - INFO - Navigating to El País opinion section...
+2025-07-12 16:49:29,351 - elpais_scraper - INFO - Successfully navigated to El País opinion section
+2025-07-12 16:49:29,352 - elpais_scraper - INFO - Extracting article links...
+2025-07-12 16:49:30,294 - elpais_scraper - INFO - Found 5 article links
+2025-07-12 16:49:30,294 - elpais_scraper - INFO - Scraping 5 articles...
+2025-07-12 16:49:30,294 - elpais_scraper - INFO - Processing article 1/5
+2025-07-12 16:49:30,294 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/editoriales/
+2025-07-12 16:49:33,808 - elpais_scraper - INFO - Successfully navigated to El País opinion section
+2025-07-12 16:49:33,808 - elpais_scraper - INFO - Extracting article links...
+2025-07-12 16:49:33,941 - elpais_scraper - INFO - Successfully navigated to El País opinion section
+2025-07-12 16:49:33,941 - elpais_scraper - INFO - Extracting article links...
+2025-07-12 16:49:34,427 - elpais_scraper - INFO - Found 5 article links
+2025-07-12 16:49:34,428 - elpais_scraper - INFO - Scraping 5 articles...
+2025-07-12 16:49:34,428 - elpais_scraper - INFO - Processing article 1/5
+2025-07-12 16:49:34,428 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/editoriales/
+2025-07-12 16:49:34,574 - elpais_scraper - INFO - Found 5 article links
+2025-07-12 16:49:34,574 - elpais_scraper - INFO - Scraping 5 articles...
+2025-07-12 16:49:34,574 - elpais_scraper - INFO - Processing article 1/5
+2025-07-12 16:49:34,574 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/editoriales/
+2025-07-12 16:50:16,009 - elpais_scraper - INFO - Successfully downloaded image: article_2581.jpg
+2025-07-12 16:50:16,009 - elpais_scraper - INFO - Successfully scraped article: Opinión...
+2025-07-12 16:50:17,014 - elpais_scraper - INFO - Processing article 2/5
+2025-07-12 16:50:17,014 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/a-menos-schengen-menos-europa.html
+2025-07-12 16:50:54,899 - elpais_scraper - INFO - Successfully downloaded image: article_2581.jpg
+2025-07-12 16:50:54,899 - elpais_scraper - INFO - Successfully scraped article: Opinión...
+2025-07-12 16:50:55,910 - elpais_scraper - INFO - Processing article 2/5
+2025-07-12 16:50:55,910 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/a-menos-schengen-menos-europa.html
+2025-07-12 16:50:55,985 - elpais_scraper - INFO - Successfully downloaded image: article_7990.jpg
+2025-07-12 16:50:55,985 - elpais_scraper - INFO - Successfully scraped article: A menos Schengen, menos Europa...
+2025-07-12 16:50:56,988 - elpais_scraper - INFO - Processing article 3/5
+2025-07-12 16:50:56,988 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/en-interes-de-los-menores.html
+2025-07-12 16:50:57,930 - elpais_scraper - INFO - Successfully downloaded image: article_2581.jpg
+2025-07-12 16:50:57,930 - elpais_scraper - INFO - Successfully scraped article: Opinión...
+2025-07-12 16:50:58,936 - elpais_scraper - INFO - Processing article 2/5
+2025-07-12 16:50:58,936 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/a-menos-schengen-menos-europa.html
+2025-07-12 16:51:13,073 - elpais_scraper - INFO - Successfully downloaded image: article_2581.jpg
+2025-07-12 16:51:13,073 - elpais_scraper - INFO - Successfully scraped article: Opinión...
+2025-07-12 16:51:14,076 - elpais_scraper - INFO - Processing article 2/5
+2025-07-12 16:51:14,076 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/a-menos-schengen-menos-europa.html
+2025-07-12 16:51:23,628 - elpais_scraper - INFO - Successfully downloaded image: article_2581.jpg
+2025-07-12 16:51:23,628 - elpais_scraper - INFO - Successfully scraped article: Opinión...
+2025-07-12 16:51:24,634 - elpais_scraper - INFO - Processing article 2/5
+2025-07-12 16:51:24,634 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/a-menos-schengen-menos-europa.html
+2025-07-12 16:51:37,217 - elpais_scraper - INFO - Successfully downloaded image: article_6436.jpg
+2025-07-12 16:51:37,230 - elpais_scraper - INFO - Successfully scraped article: En interés de los menores...
+2025-07-12 16:51:38,237 - elpais_scraper - INFO - Processing article 4/5
+2025-07-12 16:51:38,237 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/singularidad.html
+2025-07-12 16:52:17,039 - elpais_scraper - INFO - Successfully downloaded image: article_2377.jpg
+2025-07-12 16:52:17,039 - elpais_scraper - INFO - Successfully scraped article: Singularidad...
+2025-07-12 16:52:18,043 - elpais_scraper - INFO - Processing article 5/5
+2025-07-12 16:52:18,043 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/el-mar-ya-no-es-eterno.html
+2025-07-12 16:52:21,624 - elpais_scraper - INFO - Successfully downloaded image: article_7990.jpg
+2025-07-12 16:52:21,626 - elpais_scraper - INFO - Successfully scraped article: A menos Schengen, menos Europa...
+2025-07-12 16:52:22,629 - elpais_scraper - INFO - Processing article 3/5
+2025-07-12 16:52:22,629 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/en-interes-de-los-menores.html
+2025-07-12 16:52:25,532 - elpais_scraper - INFO - Successfully downloaded image: article_7990.jpg
+2025-07-12 16:52:25,535 - elpais_scraper - INFO - Successfully scraped article: A menos Schengen, menos Europa...
+2025-07-12 16:52:26,538 - elpais_scraper - INFO - Processing article 3/5
+2025-07-12 16:52:26,538 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/en-interes-de-los-menores.html
+2025-07-12 16:52:43,183 - elpais_scraper - INFO - Successfully downloaded image: article_7990.jpg
+2025-07-12 16:52:43,183 - elpais_scraper - INFO - Successfully scraped article: A menos Schengen, menos Europa...
+2025-07-12 16:52:44,187 - elpais_scraper - INFO - Processing article 3/5
+2025-07-12 16:52:44,187 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/en-interes-de-los-menores.html
+2025-07-12 16:52:53,721 - elpais_scraper - INFO - Successfully downloaded image: article_7990.jpg
+2025-07-12 16:52:53,721 - elpais_scraper - INFO - Successfully scraped article: A menos Schengen, menos Europa...
+2025-07-12 16:52:54,727 - elpais_scraper - INFO - Processing article 3/5
+2025-07-12 16:52:54,727 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/en-interes-de-los-menores.html
+2025-07-12 16:52:55,926 - elpais_scraper - INFO - Successfully downloaded image: article_5281.jpg
+2025-07-12 16:52:55,930 - elpais_scraper - INFO - Successfully scraped article: El mar ya no es eterno...
+2025-07-12 16:52:56,932 - elpais_scraper - INFO - Successfully scraped 5 articles
+2025-07-12 16:52:58,281 - elpais_scraper - INFO - WebDriver closed successfully
+2025-07-12 16:52:58,281 - elpais_scraper - INFO - Test completed successfully on Safari - 5 articles scraped
+2025-07-12 16:53:50,653 - elpais_scraper - INFO - Successfully downloaded image: article_6436.jpg
+2025-07-12 16:53:50,653 - elpais_scraper - INFO - Successfully scraped article: En interés de los menores...
+2025-07-12 16:53:51,667 - elpais_scraper - INFO - Processing article 4/5
+2025-07-12 16:53:51,667 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/singularidad.html
+2025-07-12 16:53:53,914 - elpais_scraper - INFO - Successfully downloaded image: article_6436.jpg
+2025-07-12 16:53:53,914 - elpais_scraper - INFO - Successfully scraped article: En interés de los menores...
+2025-07-12 16:53:54,920 - elpais_scraper - INFO - Processing article 4/5
+2025-07-12 16:53:54,920 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/singularidad.html
+2025-07-12 16:54:13,608 - elpais_scraper - INFO - Successfully downloaded image: article_6436.jpg
+2025-07-12 16:54:13,610 - elpais_scraper - INFO - Successfully scraped article: En interés de los menores...
+2025-07-12 16:54:14,612 - elpais_scraper - INFO - Processing article 4/5
+2025-07-12 16:54:14,612 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/singularidad.html
+2025-07-12 16:54:24,467 - elpais_scraper - INFO - Successfully downloaded image: article_6436.jpg
+2025-07-12 16:54:24,467 - elpais_scraper - INFO - Successfully scraped article: En interés de los menores...
+2025-07-12 16:54:25,479 - elpais_scraper - INFO - Processing article 4/5
+2025-07-12 16:54:25,479 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/singularidad.html
+2025-07-12 16:55:17,404 - elpais_scraper - INFO - Successfully downloaded image: article_2377.jpg
+2025-07-12 16:55:17,404 - elpais_scraper - INFO - Successfully scraped article: Singularidad...
+2025-07-12 16:55:18,408 - elpais_scraper - INFO - Processing article 5/5
+2025-07-12 16:55:18,408 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/el-mar-ya-no-es-eterno.html
+2025-07-12 16:55:20,887 - elpais_scraper - INFO - Successfully downloaded image: article_2377.jpg
+2025-07-12 16:55:20,889 - elpais_scraper - INFO - Successfully scraped article: Singularidad...
+2025-07-12 16:55:21,892 - elpais_scraper - INFO - Processing article 5/5
+2025-07-12 16:55:21,892 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/el-mar-ya-no-es-eterno.html
+2025-07-12 16:55:42,889 - elpais_scraper - INFO - Successfully downloaded image: article_2377.jpg
+2025-07-12 16:55:42,889 - elpais_scraper - INFO - Successfully scraped article: Singularidad...
+2025-07-12 16:55:43,895 - elpais_scraper - INFO - Processing article 5/5
+2025-07-12 16:55:43,895 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/el-mar-ya-no-es-eterno.html
+2025-07-12 16:55:55,138 - elpais_scraper - INFO - Successfully downloaded image: article_2377.jpg
+2025-07-12 16:55:55,145 - elpais_scraper - INFO - Successfully scraped article: Singularidad...
+2025-07-12 16:55:56,147 - elpais_scraper - INFO - Processing article 5/5
+2025-07-12 16:55:56,147 - elpais_scraper - INFO - Scraping article: https://elpais.com/opinion/2025-07-12/el-mar-ya-no-es-eterno.html
+2025-07-12 16:56:44,893 - elpais_scraper - INFO - Successfully downloaded image: article_5281.jpg
+2025-07-12 16:56:44,897 - elpais_scraper - INFO - Successfully scraped article: El mar ya no es eterno...
+2025-07-12 16:56:45,898 - elpais_scraper - INFO - Successfully scraped 5 articles
+2025-07-12 16:56:47,194 - elpais_scraper - INFO - Successfully downloaded image: article_5281.jpg
+2025-07-12 16:56:47,194 - elpais_scraper - INFO - Successfully scraped article: El mar ya no es eterno...
+2025-07-12 16:56:47,379 - elpais_scraper - INFO - WebDriver closed successfully
+2025-07-12 16:56:47,379 - elpais_scraper - INFO - Test completed successfully on Safari - 5 articles scraped
+2025-07-12 16:56:48,209 - elpais_scraper - INFO - Successfully scraped 5 articles
+2025-07-12 16:56:49,782 - elpais_scraper - INFO - WebDriver closed successfully
+2025-07-12 16:56:49,782 - elpais_scraper - INFO - Test completed successfully on Chrome - 5 articles scraped
+2025-07-12 16:57:11,395 - elpais_scraper - INFO - Successfully downloaded image: article_5281.jpg
+2025-07-12 16:57:11,402 - elpais_scraper - INFO - Successfully scraped article: El mar ya no es eterno...
+2025-07-12 16:57:12,404 - elpais_scraper - INFO - Successfully scraped 5 articles
+2025-07-12 16:57:13,825 - elpais_scraper - INFO - WebDriver closed successfully
+2025-07-12 16:57:13,825 - elpais_scraper - INFO - Test completed successfully on Chrome - 5 articles scraped
+2025-07-12 16:57:24,689 - elpais_scraper - INFO - Successfully downloaded image: article_5281.jpg
+2025-07-12 16:57:24,691 - elpais_scraper - INFO - Successfully scraped article: El mar ya no es eterno...
+2025-07-12 16:57:25,693 - elpais_scraper - INFO - Successfully scraped 5 articles
+2025-07-12 16:57:27,098 - elpais_scraper - INFO - WebDriver closed successfully
+2025-07-12 16:57:27,098 - elpais_scraper - INFO - Test completed successfully on Firefox - 5 articles scraped
+2025-07-12 16:57:29,062 - elpais_scraper - WARNING - Build 'El País Scraper Build' not found
+2025-07-12 16:57:29,062 - elpais_scraper - INFO - Tests completed: 5 passed, 0 failed
