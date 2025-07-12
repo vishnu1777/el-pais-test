@@ -33,11 +33,47 @@ class ElPaisScraper:
             options = ChromeOptions()
             if self.headless:
                 options.add_argument("--headless")
+            
+            # Basic Chrome options
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--disable-gpu")
             options.add_argument("--window-size=1920,1080")
             options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
+            
+            # Suppress warnings and errors
+            options.add_argument("--disable-logging")
+            options.add_argument("--disable-web-security")
+            options.add_argument("--disable-features=TranslateUI")
+            options.add_argument("--disable-features=VizDisplayCompositor")
+            options.add_argument("--disable-ipc-flooding-protection")
+            options.add_argument("--disable-renderer-backgrounding")
+            options.add_argument("--disable-backgrounding-occluded-windows")
+            options.add_argument("--disable-client-side-phishing-detection")
+            options.add_argument("--disable-sync")
+            options.add_argument("--disable-default-apps")
+            options.add_argument("--disable-extensions")
+            options.add_argument("--disable-plugins")
+            options.add_argument("--disable-hang-monitor")
+            options.add_argument("--disable-prompt-on-repost")
+            options.add_argument("--disable-domain-reliability")
+            options.add_argument("--disable-component-extensions-with-background-pages")
+            options.add_argument("--disable-background-timer-throttling")
+            options.add_argument("--disable-background-networking")
+            options.add_argument("--disable-breakpad")
+            options.add_argument("--disable-component-update")
+            options.add_argument("--disable-features=Translate")
+            options.add_argument("--disable-software-rasterizer")
+            options.add_argument("--log-level=3")  # Suppress INFO, WARNING, and ERROR logs
+            
+            # Suppress specific warnings
+            options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+            options.add_experimental_option("useAutomationExtension", False)
+            
+            # Suppress DevTools and other messages
+            options.add_argument("--silent")
+            options.add_argument("--disable-blink-features=AutomationControlled")
+            
             return options
         elif self.browser == "firefox":
             options = FirefoxOptions()
@@ -54,9 +90,35 @@ class ElPaisScraper:
         try:
             if capabilities:  # For BrowserStack
                 from selenium.webdriver import Remote
+                from selenium.webdriver.chrome.options import Options as ChromeOptions
+                from selenium.webdriver.firefox.options import Options as FirefoxOptions
+                
+                # Determine browser type from capabilities
+                browser_name = capabilities.get("browserName", "chrome").lower()
+                
+                if browser_name == "chrome":
+                    options = ChromeOptions()
+                elif browser_name == "firefox":
+                    options = FirefoxOptions()
+                else:
+                    # Default to Chrome options for Safari and Edge
+                    options = ChromeOptions()
+                
+                # Set BrowserStack capabilities
+                for key, value in capabilities.items():
+                    if key not in ["browserName"]:  # browserName is handled by options type
+                        options.set_capability(key, value)
+                
+                # Add BrowserStack credentials to options if not already set
+                if "bstack:options" in capabilities:
+                    bstack_options = capabilities["bstack:options"].copy()
+                    bstack_options["userName"] = settings.browserstack_username
+                    bstack_options["accessKey"] = settings.browserstack_access_key
+                    options.set_capability("bstack:options", bstack_options)
+                
                 self.driver = Remote(
                     command_executor=f"https://{settings.browserstack_username}:{settings.browserstack_access_key}@hub-cloud.browserstack.com/wd/hub",
-                    desired_capabilities=capabilities
+                    options=options
                 )
             else:  # For local testing
                 if self.browser == "chrome":

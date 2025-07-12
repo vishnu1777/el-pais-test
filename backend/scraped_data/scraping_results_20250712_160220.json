@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-07-12T16:02:20.167430",
+  "summary": {
+    "total_articles_scraped": 5,
+    "successful_translations": 5,
+    "words_analyzed": 0,
+    "processing_time_seconds": 458.05866861343384,
+    "success_count": 5,
+    "error_count": 0
+  },
+  "articles": [
+    {
+      "title": "Opinión",
+      "content_preview": "With your agreement, we and our partners use cookies or similar technologies to store, access, and process personal data like your visit on this website. You can withdraw your consent or set your pref...",
+      "url": "https://elpais.com/opinion/editoriales/",
+      "image_url": "https://imagenes.elpais.com/resizer/v2/4EAEBAGGP5DAFI33EGL2RPJCU4.jpg?auth=644d287548d2a050c2ba90ea6902fb7c814827111d0b664a498047a0c8af9ba0&width=414&height=233&smart=true",
+      "local_image_path": "scraped_images\\images\\article_7006.jpg",
+      "scraped_at": "2025-07-12T15:56:22.773836"
+    },
+    {
+      "title": "A menos Schengen, menos Europa",
+      "content_preview": "With your agreement, we and our partners use cookies or similar technologies to store, access, and process personal data like your visit on this website. You can withdraw your consent or set your pref...",
+      "url": "https://elpais.com/opinion/2025-07-12/a-menos-schengen-menos-europa.html",
+      "image_url": "https://imagenes.elpais.com/resizer/v2/PMLAKZJ4FFIFXD3SXITOHVJ77A.jpg?auth=b921ea3c61d2db11a512e42da8fe4a9f64d9c2779f88ea4bf8f50b13e100324c&width=414",
+      "local_image_path": "scraped_images\\images\\article_3506.jpg",
+      "scraped_at": "2025-07-12T15:57:48.092088"
+    },
+    {
+      "title": "En interés de los menores",
+      "content_preview": "With your agreement, we and our partners use cookies or similar technologies to store, access, and process personal data like your visit on this website. You can withdraw your consent or set your pref...",
+      "url": "https://elpais.com/opinion/2025-07-12/en-interes-de-los-menores.html",
+      "image_url": "https://imagenes.elpais.com/resizer/v2/4EAEBAGGP5DAFI33EGL2RPJCU4.jpg?auth=644d287548d2a050c2ba90ea6902fb7c814827111d0b664a498047a0c8af9ba0&width=414",
+      "local_image_path": "scraped_images\\images\\article_8240.jpg",
+      "scraped_at": "2025-07-12T15:59:12.349630"
+    },
+    {
+      "title": "Singularidad",
+      "content_preview": "With your agreement, we and our partners use cookies or similar technologies to store, access, and process personal data like your visit on this website. You can withdraw your consent or set your pref...",
+      "url": "https://elpais.com/opinion/2025-07-12/singularidad.html",
+      "image_url": "https://imagenes.elpais.com/resizer/v2/NVPXZJWQ2RO7ZNJE63B3WSGNNU.jpg?auth=77f3e9db487c004b27c5c0002e707a4e804014c9d8498b6d242cda69698f1b10&width=414",
+      "local_image_path": "scraped_images\\images\\article_3041.jpg",
+      "scraped_at": "2025-07-12T16:00:36.326410"
+    },
+    {
+      "title": "El mar ya no es eterno",
+      "content_preview": "With your agreement, we and our partners use cookies or similar technologies to store, access, and process personal data like your visit on this website. You can withdraw your consent or set your pref...",
+      "url": "https://elpais.com/opinion/2025-07-12/el-mar-ya-no-es-eterno.html",
+      "image_url": "https://imagenes.elpais.com/resizer/v2/TWG4SQMWEFBE7AV3HLKQPT3FVA.jpg?auth=6892a917610edb7f86069321bf937907a8cd59abe420750ea3ca5ebfe5f0c9f7&width=414",
+      "local_image_path": "scraped_images\\images\\article_6867.jpg",
+      "scraped_at": "2025-07-12T16:02:00.444149"
+    }
+  ],
+  "translated_articles": [
+    {
+      "original_title": "Opinión",
+      "translated_title": "Opinion",
+      "translation_service": "Google Translate",
+      "translated_at": "2025-07-12T16:02:10.647309"
+    },
+    {
+      "original_title": "A menos Schengen, menos Europa",
+      "translated_title": "Less Schengen, less Europe",
+      "translation_service": "Google Translate",
+      "translated_at": "2025-07-12T16:02:12.763464"
+    },
+    {
+      "original_title": "En interés de los menores",
+      "translated_title": "In the interest of minors",
+      "translation_service": "Google Translate",
+      "translated_at": "2025-07-12T16:02:15.210290"
+    },
+    {
+      "original_title": "Singularidad",
+      "translated_title": "Singularity",
+      "translation_service": "Google Translate",
+      "translated_at": "2025-07-12T16:02:17.571941"
+    },
+    {
+      "original_title": "El mar ya no es eterno",
+      "translated_title": "The sea is no longer eternal",
+      "translation_service": "Google Translate",
+      "translated_at": "2025-07-12T16:02:19.654222"
+    }
+  ],
+  "word_analysis": [],
+  "errors": []
+}

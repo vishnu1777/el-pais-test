@@ -1,7 +1,15 @@
 import time
 import json
+import warnings
+import logging
+import os
 from datetime import datetime
 from typing import List, Optional
+
+# Suppress common warnings and set environment variables
+warnings.filterwarnings("ignore")
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # Suppress TensorFlow warnings
+os.environ["PYTHONWARNINGS"] = "ignore"
 
 from src.scraper.el_pais_scraper import ElPaisScraper
 from src.translator.translation_service import TranslationService
@@ -15,6 +23,11 @@ class MainApplication:
     """Main application orchestrator for the El País scraping workflow."""
     
     def __init__(self):
+        # Suppress additional logging
+        logging.getLogger("selenium").setLevel(logging.CRITICAL)
+        logging.getLogger("urllib3").setLevel(logging.CRITICAL)
+        logging.getLogger("requests").setLevel(logging.CRITICAL)
+        
         self.logger = Logger()
         self.scraper: Optional[ElPaisScraper] = None
         self.translator: Optional[TranslationService] = None
