@@ -1,0 +1,15 @@
+selenium==4.21.0
+beautifulsoup4==4.12.3
+requests==2.31.0
+python-dotenv==1.0.1
+pydantic==2.7.4
+typing-extensions==4.12.2
+uvicorn==0.30.1
+googletrans==4.0.0-rc1
+deep-translator==1.11.4
+pillow==10.4.0
+aiofiles==23.2.1
+python-multipart==0.0.9
+pytest-asyncio==0.23.7
+loguru==0.7.2
+pydantic-settings==2.3.4
