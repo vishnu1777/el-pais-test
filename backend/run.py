@@ -23,6 +23,21 @@ def run_scraping():
     print("🚀 Starting El País News Scraper")
     print("=" * 50)
     
+    # Suppress Selenium and urllib3 warnings
+    import warnings
+    import logging
+    import os
+    
+    warnings.filterwarnings("ignore")
+    
+    # Suppress specific loggers
+    logging.getLogger("selenium").setLevel(logging.ERROR)
+    logging.getLogger("urllib3").setLevel(logging.ERROR)
+    logging.getLogger("requests").setLevel(logging.ERROR)
+    
+    # Suppress Chrome GPU warnings
+    os.environ["PYTHONWARNINGS"] = "ignore"
+    
     try:
         app = MainApplication()
         result = app.run_complete_workflow()
@@ -30,11 +45,13 @@ def run_scraping():
         if result.success_count > 0:
             print("\n✅ Scraping completed successfully!")
             print(f"📊 Results: {result.success_count} articles processed")
+            if result.error_count > 0:
+                print(f"⚠️  Warnings: {result.error_count} minor issues encountered")
         else:
             print("\n❌ Scraping completed with errors")
             
     except Exception as e:
-        Logger.error(f"Scraping failed: {str(e)}")
+        Logger().error(f"Scraping failed: {str(e)}")
         print(f"\n💥 Error: {str(e)}")
         sys.exit(1)
 

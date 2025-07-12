@@ -1,0 +1,33 @@
+2025-07-12 17:48:39,291 - elpais_scraper - INFO - Starting parallel tests on 5 configurations with 5 workers
+2025-07-12 17:48:39,292 - elpais_scraper - INFO - Starting test on Chrome latest - Windows 10
+2025-07-12 17:48:39,294 - elpais_scraper - INFO - Starting test on Firefox latest - Windows 10
+2025-07-12 17:48:39,294 - elpais_scraper - INFO - Starting test on Safari latest - OS X Big Sur
+2025-07-12 17:48:39,296 - elpais_scraper - INFO - Starting test on Chrome latest - android 11.0
+2025-07-12 17:48:39,296 - elpais_scraper - INFO - Starting test on Safari latest - ios 15
+2025-07-12 17:48:42,040 - elpais_scraper - ERROR - Failed to initialize WebDriver: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,040 - elpais_scraper - ERROR - Error during scraping: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,040 - elpais_scraper - INFO - Test completed successfully on Chrome - 0 articles scraped
+2025-07-12 17:48:42,066 - elpais_scraper - ERROR - Failed to initialize WebDriver: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,070 - elpais_scraper - ERROR - Error during scraping: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,072 - elpais_scraper - INFO - Test completed successfully on Safari - 0 articles scraped
+2025-07-12 17:48:42,082 - elpais_scraper - ERROR - Failed to initialize WebDriver: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,086 - elpais_scraper - ERROR - Error during scraping: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,088 - elpais_scraper - INFO - Test completed successfully on Firefox - 0 articles scraped
+2025-07-12 17:48:42,100 - elpais_scraper - ERROR - Failed to initialize WebDriver: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,100 - elpais_scraper - ERROR - Error during scraping: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,100 - elpais_scraper - INFO - Test completed successfully on Chrome - 0 articles scraped
+2025-07-12 17:48:42,119 - elpais_scraper - ERROR - Failed to initialize WebDriver: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,121 - elpais_scraper - ERROR - Error during scraping: Message: Automate testing time expired.
+
+2025-07-12 17:48:42,121 - elpais_scraper - INFO - Test completed successfully on Safari - 0 articles scraped
+2025-07-12 17:48:44,457 - elpais_scraper - WARNING - Build 'El País Scraper Build' not found
+2025-07-12 17:48:44,457 - elpais_scraper - INFO - Tests completed: 0 passed, 5 failed

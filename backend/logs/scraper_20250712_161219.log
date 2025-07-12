@@ -1,0 +1,1 @@
+2025-07-12 16:12:19,079 - elpais_scraper - ERROR - BrowserStack testing failed: BrowserStack credentials not configured. Please set BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables.

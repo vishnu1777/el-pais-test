@@ -1,5 +1,7 @@
 import concurrent.futures
 import time
+import requests
+import base64
 from typing import List, Dict, Any
 from threading import Lock
 
@@ -23,6 +25,67 @@ class BrowserStackRunner:
         if not settings.browserstack_username or not settings.browserstack_access_key:
             raise ValueError("BrowserStack credentials not configured. Please set BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables.")
     
+    def _update_session_status(self, driver, status: str, reason: str = "") -> None:
+        """Update the session status in BrowserStack dashboard using JavaScript executor."""
+        try:
+            if driver and driver.session_id:
+                # Use BrowserStack's JavaScript executor for more reliable status updates
+                script = f'browserstack_executor: {{"action": "setSessionStatus", "arguments": {{"status":"{status}", "reason": "{reason}"}}}}'
+                driver.execute_script(script)
+                
+                # Add a small delay to ensure the status is processed
+                time.sleep(1)
+                
+                self.logger.info(f"Session {driver.session_id} marked as {status}: {reason}")
+        except Exception as e:
+            self.logger.warning(f"Failed to update session status: {str(e)}")
+    
+    def _update_build_status(self, build_name: str, status: str) -> None:
+        """Update the build status in BrowserStack dashboard."""
+        try:
+            # Get all builds to find the build ID
+            url = "https://api.browserstack.com/automate/builds.json"
+            
+            # Create basic auth header
+            credentials = f"{settings.browserstack_username}:{settings.browserstack_access_key}"
+            encoded_credentials = base64.b64encode(credentials.encode()).decode()
+            
+            headers = {
+                "Authorization": f"Basic {encoded_credentials}",
+                "Content-Type": "application/json"
+            }
+            
+            # Get builds
+            response = requests.get(url, headers=headers, timeout=10)
+            
+            if response.status_code == 200:
+                builds = response.json()
+                # Find the build with matching name
+                build_id = None
+                for build in builds:
+                    if build.get("automation_build", {}).get("name") == build_name:
+                        build_id = build["automation_build"]["hashed_id"]
+                        break
+                
+                if build_id:
+                    # Update build status
+                    update_url = f"https://api.browserstack.com/automate/builds/{build_id}.json"
+                    data = {"status": status}
+                    
+                    update_response = requests.put(update_url, json=data, headers=headers, timeout=10)
+                    
+                    if update_response.status_code == 200:
+                        self.logger.info(f"Build '{build_name}' marked as {status}")
+                    else:
+                        self.logger.warning(f"Failed to update build status: {update_response.status_code}")
+                else:
+                    self.logger.warning(f"Build '{build_name}' not found")
+            else:
+                self.logger.warning(f"Failed to get builds: {response.status_code}")
+                
+        except Exception as e:
+            self.logger.warning(f"Failed to update build status: {str(e)}")
+
     def get_test_capabilities(self) -> List[BrowserStackCapability]:
         """Define the test capabilities for different browser/OS combinations."""
         return [
@@ -71,6 +134,7 @@ class BrowserStackRunner:
         """Run a single test on BrowserStack with given capability."""
         start_time = time.time()
         session_id = None
+        scraper = None
         
         try:
             self.logger.info(f"Starting test on {capability.browser} {capability.browser_version} - {capability.os} {capability.os_version}")
@@ -87,9 +151,26 @@ class BrowserStackRunner:
             
             execution_time = time.time() - start_time
             
+            # Determine success based on articles scraped
+            success = len(articles) > 0
+            
+            # Update session status in BrowserStack BEFORE closing driver
+            if scraper and scraper.driver:
+                status = "passed" if success else "failed"
+                reason = f"Scraped {len(articles)} articles successfully" if success else "No articles scraped"
+                self._update_session_status(scraper.driver, status, reason)
+                
+                # Ensure status is sent before closing
+                self.logger.info(f"Waiting for status update to be processed...")
+                time.sleep(2)  # Give more time for status to be processed
+            
+            # Close the driver after status update
+            if scraper and scraper.driver:
+                scraper.close()
+            
             result = TestResult(
                 capability=capability,
-                success=len(articles) > 0,
+                success=success,
                 execution_time=execution_time,
                 articles_scraped=len(articles),
                 session_id=session_id
@@ -101,6 +182,27 @@ class BrowserStackRunner:
         except Exception as e:
             execution_time = time.time() - start_time
             error_message = str(e)
+            
+            # Get session ID if available for error reporting
+            if scraper and scraper.driver:
+                try:
+                    session_id = scraper.driver.session_id
+                except:
+                    session_id = None
+            
+            # Update session status as failed in BrowserStack BEFORE closing
+            if scraper and scraper.driver:
+                self._update_session_status(scraper.driver, "failed", f"Test failed: {error_message}")
+                
+                # Ensure status is sent before closing
+                time.sleep(2)
+            
+            # Close the driver after status update
+            if scraper and scraper.driver:
+                try:
+                    scraper.close()
+                except:
+                    pass
             
             result = TestResult(
                 capability=capability,
@@ -148,6 +250,21 @@ class BrowserStackRunner:
                     with self.results_lock:
                         results.append(error_result)
                         self.test_results.append(error_result)
+        
+        # Update build status based on overall results
+        successful_tests = [r for r in results if r.success]
+        failed_tests = [r for r in results if not r.success]
+        
+        # Determine overall build status
+        if len(failed_tests) == 0:
+            build_status = "passed"
+        else:
+            build_status = "failed"
+        
+        # Update build status in BrowserStack
+        self._update_build_status("El País Scraper Build", build_status)
+        
+        self.logger.info(f"Tests completed: {len(successful_tests)} passed, {len(failed_tests)} failed")
         
         return results
     
